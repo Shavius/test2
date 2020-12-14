@@ -1,0 +1,9 @@
+@mixin textShadow($sbcColor: $color_5) {
+    text-shadow: $sbcColor 2px 2px 4px;
+}
+
+@mixin border($bbcColor_1: $color_5, $bbcColor_2: $color_1) {
+    border: 1px solid $bbcColor_1;
+    border-radius: 5px;
+    background-color: $bbcColor_2;
+}

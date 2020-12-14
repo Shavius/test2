@@ -1,0 +1,7 @@
+.footer {
+    @include border();
+
+    &__text {
+        text-align: center;
+    }
+}
