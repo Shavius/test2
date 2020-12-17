@@ -50,10 +50,34 @@
                     }
                 }
 
+                class super_2 {
+                    public $name_1;
+                    public $name_2;
+
+                    function __construct($name_1 = 0, $name_2 = 0) {
+                        $this -> name_1 = $name_1;
+                        $this -> name_2 = $name_2;
+                    }
+
+                    function R1 ($a = 0) {
+                        if ($a == 1) return '--- ' . $this -> name_1 . ' ---' . '<br>' . '--- ' . $this -> name_2 . ' ---';
+                        return $this -> name_1 . '<br>' . $this -> name_2;
+                    }
+                }
+
+                $super_array2 = [
+                    'R1' => 'Triger_1',
+                    'R2' => 'Triger_2'
+                ];
+
                 $admin = New super_1();
                 $admin->name = $super_array['First'];
                 $admin->surName = $super_array['Second'];
                 echo $admin->R1() . '<br>';
+                
+                
+                $admin2 = New super_2($super_array2['R1'], $super_array2['R2']);
+                echo $admin2->R1(1);
 
 
 
