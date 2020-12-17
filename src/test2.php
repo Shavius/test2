@@ -26,8 +26,25 @@
                     }
                 }
 
-                $admin = New R1();
-                echo $admin->echoName();
+                class R2  extends R1{
+                    public $names1 = "Names_1";
+                    public $names2 = "Names_1";
+                }
+
+                $admin1 = New R1();
+                $admin2 = New R2();
+
+                $admin1 -> name1 = 'Hellow Name_1';
+                $admin1 -> name2 = 'Hellow Name_2';
+
+                echo $admin1->echoName();
+                echo $admin2->echoName();
+                echo '<br>';
+                echo $admin2->names1 . '<br>';
+                echo $admin2->names2 . '<br>';
+
+                var_dump($admin1);
+                var_dump($admin2);
 
             ?>
         </main>
