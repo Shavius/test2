@@ -17,7 +17,17 @@
         <main class="main">
             <?php
 
-                
+                class R1 {
+                    public $name1 = 'Name_1';
+                    public $name2 = 'Name_2';
+
+                    public function echoName () {
+                        return $this->name1 . '<br>' . $this->name2 . '<br>';
+                    }
+                }
+
+                $admin = New R1();
+                echo $admin->echoName();
 
             ?>
         </main>
