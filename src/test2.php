@@ -33,32 +33,27 @@
                     }
                 }
 
-                class super_1 {
-                    public $name = 'name';
-                    public $surName = 'surName';
+                $super_array = [
+                    'First' => 'Torald',
+                    'Second' => 'Reng',
+                ];
 
-                    public function R1 ($a) {
-                        return $this -> $a;
+                class super_1 {
+                    public $name = 'name_1';
+                    public $surName = 'surName_1';
+
+                    public function R1 ($c = '') {
+                        $a = $this -> name;
+                        $b = $this -> surName;
+
+                        return $a . '<br>' . $b . $c;
                     }
                 }
 
-                // $superShop = New shop();
-                // $admin = New shop();
-                // $sName = "name1";
-                // echo $superShop->naming('Hellow', $sName)  . "<br>";
-                // echo $admin->name = "Joni" . "<br>";
-                // echo $admin->name;
-                // $admin->SuperName = "Mega men" . "<br>";
-                // echo $admin->SuperName;
-                // var_dump($admin);
-
-                $test_1 = New super_1();
-                $test_1 -> name = 'Joni';
-                $test_1 -> surName = 'Elderg';
-                $F1[] = $test_1 -> R1('name') . "<br>";
-                $F1[] = $test_1 -> R1('surName') . "<br>";
-                $F2 = $F1[0] . $F1[1];
-                echo $F2;
+                $admin = New super_1();
+                $admin->name = $super_array['First'];
+                $admin->surName = $super_array['Second'];
+                echo $admin->R1() . '<br>';
 
 
 
