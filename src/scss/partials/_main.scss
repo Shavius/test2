@@ -3,6 +3,16 @@
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: $blockBottom;
+    padding: 10px 0;
+    transition: background-color $animationColor_1;
+
+    &--color {
+        background-color: grey;
+
+        h2 {
+            color: hotpink !important;
+        }
+    }
 
     &__body {
         display: flex;
@@ -24,6 +34,93 @@
         &:nth-child(2n) {
             margin-right: 0;
             width: 50%;
+        }
+    }
+
+    &__title {
+        color: $color_3;
+        text-align: center;
+        font-size: 1.5rem;
+        @include textShadow();
+        margin: 0 0 10px;
+        transition: color $animationColor_1;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.form {
+    border: 1px solid black;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-top: 20px;
+    background-color: lighten(grey, 10%);
+    border-radius: 5px;
+    text-align: center;
+
+    input {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        outline-color: skyblue;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 150px;
+        text-align: center;
+    }
+
+    button {
+        border: 1px solid black;
+        display: block;
+        outline: none;
+        border-radius: 5px;
+        font-size: 20px;
+        font-family: serif;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        background-color: skyblue;
+        width: 150px;
+        cursor: pointer;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    a {
+        border: 1px solid black;
+        border-radius: 5px;
+        display: inline-block;
+        font-size: 20px;
+        font-family: serif;
+        padding: 5px 10px;
+        background-color: skyblue;
+        color: black;
+        text-decoration: none;
+        width: 150px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .form {
+        &__title {
+            font-size: 20px;
+            padding: 0;
+            margin: 0 0 10px;
+        }
+
+        button,
+        a {
+            transition: background-color 0.5s;
+
+            &:hover {
+                background-color: indianred;
+            }
+
+            &:active {
+                background-color: lighten(indianred, 20%);
+            }
         }
     }
 }

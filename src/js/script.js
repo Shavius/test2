@@ -1,16 +1,8 @@
-var img = document.querySelectorAll('.main__body img');
-var imgActive = ('main__img--active');
-var dataImg = ('data-img-namber');
+var main = document.querySelector('.global-main');
+var btnColor = document.querySelector('.btn-color');
 
-for (let i = 0; i < img.length; i++) {
-    img[i].setAttribute(dataImg, i);
-    img[i].onclick = imgClick;
-}
-
-function imgClick() {
-    for (let i = 0; i < img.length; i++) {
-        img[i].classList.remove(imgActive);
+if (main != null && btnColor != null) {
+    btnColor.onclick = function () {
+        main.classList.toggle('main--color');
     }
-    let a = this.getAttribute(dataImg);
-    img[a].classList.add(imgActive);
 }
