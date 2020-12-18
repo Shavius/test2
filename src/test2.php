@@ -46,6 +46,24 @@
                 var_dump($admin1);
                 var_dump($admin2);
 
+                interface JT1 {
+                    function getName ();
+                }
+
+                class Testing implements JT1 {
+                    public $name1 = 'Tringer';
+                    public $name2 = 'Aladar';
+
+                    function getName() {
+                        $a = $this -> name1;
+                        $b = $this -> name2;
+                        return $a . ' ' . $b;
+                    }
+                }
+
+                $testing1 = New Testing();
+                echo $testing1->getName();
+
             ?>
         </main>
         <?php require "blocks/footer.php" ?>
