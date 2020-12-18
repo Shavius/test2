@@ -46,23 +46,69 @@
                 var_dump($admin1);
                 var_dump($admin2);
 
-                interface JT1 {
+                interface gtName {
                     function getName ();
+                    function getStatus ();
                 }
 
-                class Testing implements JT1 {
-                    public $name1 = 'Tringer';
-                    public $name2 = 'Aladar';
+                interface spName {
+                    function superName ();
+                }
+
+                class Testing implements gtName, spName {
+                    public $firstName = 'Tringer';
+                    public $SecondName = 'Aladar';
+                    public $wordSpeace = ' ';
+                    public $status = 'Admin';
 
                     function getName() {
-                        $a = $this -> name1;
-                        $b = $this -> name2;
-                        return $a . ' ' . $b;
+                        $a = $this -> firstName;
+                        $b = $this -> SecondName;
+                        $c = $this -> wordSpeace;
+                        return $a . $c . $b . $c;
+                    }
+
+                    function getStatus ($sp = ' - ') {
+                        $a = $this -> status;
+                        return $sp . $a . '<br>';
+                    }
+
+                    function superName($superName = 'Super Name: ') {
+                        $a = $superName;
+                        $a .= $this -> firstName;
+                        $a .= ' ------- ';
+                        $a .= $this -> SecondName;
+                        return $a;
                     }
                 }
 
                 $testing1 = New Testing();
+                $testing1->firstName = 'Alazar';
+                $testing1->SecondName = 'Tron';
                 echo $testing1->getName();
+                echo $testing1->getStatus(' --- ');
+                echo $testing1->superName();
+
+
+                class base1 {
+                    public function bs1 () {
+                        echo '<br> Hellow ';
+                    }
+                }
+
+                trait base2 {
+                    public function bs1 () {
+                        parent::bs1();
+                        echo 'World';
+                    }
+                }
+
+                class base3 extends base1 {
+                    use base2;
+                }
+
+                $obj = New base3();
+                $obj->bs1();
 
             ?>
         </main>
