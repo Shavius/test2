@@ -17,4 +17,8 @@
             return 'Сила: ' . $a . 'Ловкость: ' . $b . 'Броня: ' . $c;
         }
     }
+
+    class WarriorElite extends Warrior {
+        public $heavyWeapon = 'Heavy Blaser';
+    }
 ?>
