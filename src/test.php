@@ -1,9 +1,9 @@
 <?php
 
-use Empire\Warrior as EmpireWarrior;
-use Empire\WarriorElite as EmpireWarriorElite;
 use Republic\Warrior as RepublicWarrior;
 use Republic\WarriorElite as RepublicWarriorElite;
+use Empire\Warrior as EmpireWarrior;
+use Empire\WarriorElite as EmpireWarriorElite;
 
     $title = 'Test';
     require ('blocks/header.php');
@@ -22,7 +22,7 @@ use Republic\WarriorElite as RepublicWarriorElite;
 
                 // var_dump($RepWario1);
                 // var_dump($RepWarioElite1);
- 
+
                 $warriorArray = [
                     $RepWario1->getProperties(),
                     $RepWarioElite1->getProperties(),
