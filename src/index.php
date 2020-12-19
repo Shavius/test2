@@ -1,26 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.min.css">
-    <title>Home | Shava.ua</title>
-</head>
-
-<body>
+<?php
+    $title = 'Home';
+    require ('blocks/header.php');
+    require ('blocks/nav.php');
+?>
     <div class="wrapper">
-        <?php require "blocks/header.php" ?>
-        <nav class="nav">
-            <a class="nav__link" href="/index.php" title="Перейти на страницу Home">Home</a>
-            <a class="nav__link" href="/about.php" title="Перейти на страницу About">About</a>
-            <a class="nav__link" href="#" title="Перейти на страницу Images">Images</a>
-            <a class="nav__link" href="#" title="Перейти на страницу Video">Video</a>
-        </nav>
         <main class="main">
             <div class="main__other">
-               
+
             </div>
             <div class="main__body">
                 <?php for ($i = 1; $i <= 4; $i++) : ?>
@@ -28,10 +14,5 @@
                 <?php endfor; ?>
             </div>
         </main>
-        <?php require "blocks/footer.php" ?>
     </div>
-
-    <script src="js/script.js"></script>
-</body>
-
-</html>
+<?php require ('blocks/footer.php'); ?>
