@@ -12,23 +12,8 @@
 <body>
     <div class="wrapper">
         <div class="main__other">
-            <style>
-                .super-class {
-                    color: red;
-                    font-size: 20px;
-                    margin: 10px 0;
-                    padding: 0;
-                }
-            </style>
             <?php
-            $nameStr = "R";
-            $tagInnerH1 = "Hellow World";
-            $tagClassH1 = "super-class";
-
-            for ($i = 1; $i <= 5; $i++) {
-                $addClassH1["$nameStr" . $i] = "<h1 class=\"$tagClassH1\">$tagInnerH1 $i</h1>";
-                echo $addClassH1["$nameStr" . $i];
-            }
+                
             ?>
         </div>
     </div>
