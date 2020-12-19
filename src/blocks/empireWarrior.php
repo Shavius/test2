@@ -5,20 +5,25 @@
         public function getProperties ();
     }
 
-    class Warrior implements Fighter{
+    class Warrior implements Fighter {
+        public $name = "<span class=\"color\">Имперский солдат</span>:";
         public $strength = 5;
         public $agility = 10;
         public $armor = 20;
+        public $Weapon = 'Blaster';
 
         public function getProperties () {
-            $a = $this -> strength;
-            $b = $this -> agility;
-            $c = $this -> armor;
-            return 'Сила: ' . $a . 'Ловкость: ' . $b . 'Броня: ' . $c;
+            $n = $this -> name;
+            $w = $this -> Weapon;
+            $s = $this -> strength;
+            $a = $this -> agility;
+            $ar = $this -> armor;
+            return $n . ' Сила: ' . $s . ' Ловкость: ' . $a . ' Броня: ' . $ar . ' Оружие: ' . $w;
         }
     }
 
     class WarriorElite extends Warrior {
-        public $heavyWeapon = 'Heavy Blaser';
+        public $name = "<span class=\"color\">Имперский солдат Элита</span>:";
+        public $Weapon = 'Heavy Blaser';
     }
 ?>

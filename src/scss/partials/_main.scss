@@ -26,4 +26,12 @@
             width: 50%;
         }
     }
+
+    &__title {
+        font-size: 20px;
+
+        span {
+            color: $color_3;
+        }
+    }
 }

@@ -20,13 +20,19 @@ use Republic\WarriorElite as RepublicWarriorElite;
                 $EmpWario1 = new EmpireWarrior();
                 $EmpWarioElite1 = new EmpireWarriorElite();
 
-                var_dump($RepWario1);
-                var_dump($RepWarioElite1);
-
-                var_dump($EmpWario1);
-                var_dump($EmpWarioElite1);
-
+                // var_dump($RepWario1);
+                // var_dump($RepWarioElite1);
+ 
+                $warriorArray = [
+                    $RepWario1->getProperties(),
+                    $RepWarioElite1->getProperties(),
+                    $EmpWario1->getProperties(),
+                    $EmpWarioElite1->getProperties(),
+                ];
             ?>
+            <? for ($i = 0; $i < count($warriorArray); $i++): ?>
+                <h2 class="main__title"><?= $warriorArray[$i]; ?></h2>
+            <? endfor ?>
         </div>
     </div>
 <?php require ('blocks/footer.php'); ?>
