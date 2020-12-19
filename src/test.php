@@ -3,12 +3,15 @@
 use Rep\Warrior as RepWarrior;
 use Emp\Warrior as EmpWarrior;
 
-    $title = 'Test';
-    require ('blocks/header.php');
-    require ('blocks/nav.php');
-    require ('blocks/modules.php');
-    require ('blocks/republicWarrior.php');
-    require ('blocks/empireWarrior.php');
+$title = 'Test';
+require ('blocks/header.php');
+require ('blocks/nav.php');
+require ('blocks/modules.php');
+require ('blocks/empireWarrior.php');
+require ('blocks/republicWarrior.php');
+
+
+
 ?>
     <div class="wrapper">
         <div class="main__other">
