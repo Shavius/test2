@@ -1,38 +1,29 @@
 <?php
 
-use Republic\Warrior as RepublicWarrior;
-use Republic\WarriorElite as RepublicWarriorElite;
-use Empire\Warrior as EmpireWarrior;
-use Empire\WarriorElite as EmpireWarriorElite;
+use Rep\Warrior as RepWarrior;
+use Emp\Warrior as EmpWarrior;
 
     $title = 'Test';
     require ('blocks/header.php');
     require ('blocks/nav.php');
+    require ('blocks/modules.php');
     require ('blocks/republicWarrior.php');
     require ('blocks/empireWarrior.php');
 ?>
     <div class="wrapper">
         <div class="main__other">
             <?php
-                $RepWario1 = new RepublicWarrior();
-                $RepWarioElite1 = new RepublicWarriorElite();
+            
+                $RepWarrior1 = new RepWarrior();
+                echo $RepWarrior1->getProperties() . "<br>";
 
-                $EmpWario1 = new EmpireWarrior();
-                $EmpWarioElite1 = new EmpireWarriorElite();
+                $EmpWarrior1 = new EmpWarrior();
+                echo $EmpWarrior1->getProperties() . "<br>";
 
-                // var_dump($RepWario1);
-                // var_dump($RepWarioElite1);
+                var_dump($RepWarrior1);
+                var_dump($EmpWarrior1);
 
-                $warriorArray = [
-                    $RepWario1->getProperties(),
-                    $RepWarioElite1->getProperties(),
-                    $EmpWario1->getProperties(),
-                    $EmpWarioElite1->getProperties(),
-                ];
             ?>
-            <? for ($i = 0; $i < count($warriorArray); $i++): ?>
-                <h2 class="main__title"><?= $warriorArray[$i]; ?></h2>
-            <? endfor ?>
         </div>
     </div>
 <?php require ('blocks/footer.php'); ?>
