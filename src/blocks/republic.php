@@ -20,4 +20,9 @@ class Warrior {
     }
 }
 
+class WarriorElite extends Warrior {
+    public $name = 'Республиканский Элитный солдат:';
+    public $weapon = 'Heavy Blaster';
+}
+
 ?>
