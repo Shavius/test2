@@ -3,8 +3,6 @@
     require ('blocks/header.php');
     require ('blocks/nav.php');
 ?>
-    <div class="wrapper">
-       
-        <h1>Hellow</h1>
-    </div>
+
+    <h1>Hellow</h1>
 <?php require ('blocks/footer.php'); ?>
