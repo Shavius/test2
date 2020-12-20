@@ -1,9 +1,10 @@
 <?php
 namespace Empire;
 
+use interfaceCommonwealth\Commonwealth;
 use Traits\hellowWorld;
 
-class Warrior {
+class Warrior implements Commonwealth {
     use hellowWorld;
 
     public $name = 'Имперский солдат:';

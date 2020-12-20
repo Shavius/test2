@@ -8,6 +8,7 @@ use Empire\WarriorElite as EmpireWarriorElite;
     $title = 'Test';
     require ('blocks/header.php');
     require ('blocks/nav.php');
+    require ('blocks/interfaceCommonwealth.php');
     require ('blocks/traits.php');
     require ('blocks/republic.php');
     require ('blocks/empire.php');
