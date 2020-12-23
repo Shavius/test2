@@ -17,7 +17,10 @@ use Empire\WarriorElite as EmpireWarriorElite;
     <div class="wrapper">
         <div class="main__other">
             <input id="show_ip" type="button" name="" value="Показать мой ip" >
-            <div class="my_ip">Мой ip</div>
+            <div class="my-ip">
+                <h3>Мой ip</h3>
+                <p class="my-ip__body"></p>
+            </div>
         </div>
     </div>
 <?php require ('blocks/footer.php'); ?>

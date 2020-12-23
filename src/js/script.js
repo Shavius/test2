@@ -16,10 +16,10 @@ function imgClick() {
 }
 
 let buttonIp = document.querySelector('#show_ip');
+let divMy_ip = document.querySelector('.my-ip__body');
 
 if (buttonIp != null) {
     buttonIp.onclick = onclickButtonIp;
-
     function onclickButtonIp() {
         ajaxGet();
     }
@@ -27,8 +27,12 @@ if (buttonIp != null) {
     function ajaxGet() {
         var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
-            console.log(request.readyState);
+            if (request.readyState == 4 && request.status == 200) {
+                console.log('Запрос получен');
+                divMy_ip.innerHTML = request.responseText;
+            }
         }
+
         request.open('GET', 'blocks/ip.php');
         request.send();
     }
