@@ -39,3 +39,16 @@ if (buttonIp != null) {
     }
 }
 
+function R1 (numb_1 = 0, numb_2 = 0, ins) {
+    let res = numb_1 + numb_2;
+    let b = ins;
+    res += b;
+    return res;
+}
+
+function R2 (text = 'R1') {
+    let a = ' ' + text;
+    return a;
+}
+
+console.log(R1(100, 200, R2('hellow')));
