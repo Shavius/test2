@@ -22,6 +22,7 @@ if (buttonIp != null) {
     buttonIp.onclick = onclickButtonIp;
     function onclickButtonIp() {
         ajaxGet('blocks/ip.php');
+        ajaxGet('blocks/ip.php?parametrs=newParametrs');
     }
 
     function ajaxGet(url) {
