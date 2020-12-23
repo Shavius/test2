@@ -43,10 +43,14 @@ var divResult = document.querySelector('.result');
 var inp_email = document.querySelector('input[name=email]');
 var inp_phone = document.querySelector('input[name=phone]');
 var inp_name = document.querySelector('input[name=name]');
+var btnSend = document.querySelector('#send');
+var divForms = document.querySelector('.forms__form');
 
-document.querySelector('#send').onclick = function () {
-    var params = 'email=' + inp_email.value + '&' + 'phone=' + inp_phone.value + '&' + 'name=' + inp_name.value;
-    ajaxPost(params);
+if (btnSend != null) {
+    btnSend.onclick = function () {
+        var params = 'email=' + inp_email.value + '&' + 'phone=' + inp_phone.value + '&' + 'name=' + inp_name.value;
+        ajaxPost(params);
+    }
 }
 
 function ajaxPost(params) {
@@ -56,6 +60,13 @@ function ajaxPost(params) {
         if (request.readyState == 4 && request.status == 200) {
             console.log('Запрос получен');
             divResult.innerHTML = request.responseText;
+            if (request.responseText == 1) {
+                divResult.innerHTML = 'Форма успешно отправленна';
+                divForms.style.display = 'none';
+            }
+            else {
+                divResult.innerHTML = request.responseText;
+            }
         }
     }
 
