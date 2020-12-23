@@ -21,10 +21,10 @@ let divMy_ip = document.querySelector('.my-ip__body');
 if (buttonIp != null) {
     buttonIp.onclick = onclickButtonIp;
     function onclickButtonIp() {
-        ajaxGet();
+        ajaxGet('blocks/ip.php');
     }
 
-    function ajaxGet() {
+    function ajaxGet(url) {
         var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
             if (request.readyState == 4 && request.status == 200) {
@@ -33,7 +33,7 @@ if (buttonIp != null) {
             }
         }
 
-        request.open('GET', 'blocks/ip.php');
+        request.open('GET', url);
         request.send();
     }
 }
