@@ -14,3 +14,23 @@ function imgClick() {
     let a = this.getAttribute(dataImg);
     img[a].classList.add(imgActive);
 }
+
+let buttonIp = document.querySelector('#show_ip');
+
+if (buttonIp != null) {
+    buttonIp.onclick = onclickButtonIp;
+
+    function onclickButtonIp() {
+        ajaxGet();
+    }
+
+    function ajaxGet() {
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            console.log(request.readyState);
+        }
+        request.open('GET', 'blocks/ip.php');
+        request.send();
+    }
+}
+
