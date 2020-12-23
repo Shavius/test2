@@ -21,16 +21,22 @@ let divMy_ip = document.querySelector('.my-ip__body');
 if (buttonIp != null) {
     buttonIp.onclick = onclickButtonIp;
     function onclickButtonIp() {
-        ajaxGet('blocks/ip.php');
-        ajaxGet('blocks/ip.php?parametrs=newParametrs');
+        ajaxGet('blocks/ip.php', function(data){
+            console.log(data);
+        });
+        ajaxGet('blocks/ip.php?parametrs=newParametrs', function(data){
+            divMy_ip.innerHTML = data;
+        });
     }
 
-    function ajaxGet(url) {
+    function ajaxGet(url, callback) {
+        var f = callback || function (data) {};
         var request = new XMLHttpRequest();
+
         request.onreadystatechange = function () {
             if (request.readyState == 4 && request.status == 200) {
                 console.log('Запрос получен');
-                divMy_ip.innerHTML = request.responseText;
+                f(request.responseText);
             }
         }
 
@@ -38,17 +44,3 @@ if (buttonIp != null) {
         request.send();
     }
 }
-
-function R1 (numb_1 = 0, numb_2 = 0, ins) {
-    let res = numb_1 + numb_2;
-    let b = ins;
-    res += b;
-    return res;
-}
-
-function R2 (text = 'R1') {
-    let a = ' ' + text;
-    return a;
-}
-
-console.log(R1(100, 200, R2('hellow')));
