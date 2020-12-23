@@ -21,6 +21,21 @@ use Empire\WarriorElite as EmpireWarriorElite;
                 <h3>Мой ip</h3>
                 <p class="my-ip__body"></p>
             </div>
+            <div class="forms">
+                <form class="forms__form" action="">
+                    Email: <br>
+                    <input name="email" type="email"> <br>
+                    Телефон: <br>
+                    <input name="phone" type="text"> <br>
+                    Имя: <br>
+                    <input name="name" type="text"> <br>
+                    <br>
+                    <input id="send" type="button" value="Отправить">
+                    <br>
+                    <br>
+                </form>
+                <div class="result"></div>
+            </div>
         </div>
     </div>
 <?php require ('blocks/footer.php'); ?>
