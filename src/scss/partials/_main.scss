@@ -27,6 +27,52 @@
         }
     }
 
+    &__super-body {
+        text-align: center;
+    }
+
+    &__title {
+        color: $color_3;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    &__btn {
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: $color_1;
+        padding: 5px 15px;
+        display: inline-block;
+        margin-bottom: 10px;
+        cursor: pointer;
+        outline: none;
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    .reset--active {
+        color: $color_4;
+    }
+
+    &__input {
+        margin-bottom: 10px;
+        outline-color: green;
+        padding: 5px;
+        max-width: 300px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .content-body {
+        @include border($color_3, inherit);
+        margin: 0 10px 10px;
+        box-shadow: 2px 2px 4px $color_5;
+
+        &__item {
+            color: $color_3;
+            margin: 5px 0;
+        }
+    }
 }
 
 .color-1 {

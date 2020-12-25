@@ -74,3 +74,46 @@ function ajaxPost(params) {
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     request.send(params);
 }
+
+let mainContentDiv = document.querySelector('.main__content');
+let btnStart = document.querySelector('.main__btn.start');
+let btnReset = document.querySelector('.main__btn.reset');
+let mainInput = document.querySelector('.main__input');
+var toggle = 0;
+
+
+if (btnStart != null && btnReset != null) {
+    console.log(mainInput.value);
+    btnStart.onclick = onclickSuperButton;
+    btnReset.onclick = onclickSuperButton2;
+}
+
+function addMainContentDiv(url, LongArr) {
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 && request.status == 200) {
+            console.log('Запрос получен');
+            console.log(toggle);
+            mainContentDiv.innerHTML = request.responseText;
+        }
+    }
+
+    request.open('POST', url);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    request.send(LongArr);
+}
+
+function onclickSuperButton() {
+    toggle = 1;
+    btnReset.classList.add('reset--active');
+    var LongArr = 'LongArray=' + mainInput.value;
+    addMainContentDiv('blocks/Super.php', LongArr);
+}
+
+function onclickSuperButton2() {
+    toggle = 0;
+    btnReset.classList.remove('reset--active');
+    mainInput.value = 2;
+    addMainContentDiv('blocks/Super.php', 'LongArray=1');
+}
