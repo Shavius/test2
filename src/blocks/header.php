@@ -11,3 +11,7 @@
 
 <body>
     <div class="wrapper">
+    <header class="header">
+        <a class="header__title" href="/index.php">Shava.ua</a>
+    </header>
+    <?php require('blocks/nav.php'); ?>
