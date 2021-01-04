@@ -7,6 +7,9 @@ let person = {
     'age': 20,
     'sayHellow': hellow,
     'sayHellowWindow': hellow.bind(document),
+    'logInfo': function () {
+        console.log(`Name is ${this.name}`);
+    }
 };
 
 // console.log(person);
@@ -15,4 +18,6 @@ let person = {
 
 // person.sayHellow();
 
-person.sayHellowWindow();
+// person.sayHellowWindow();
+
+person.logInfo();
