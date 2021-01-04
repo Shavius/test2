@@ -6,6 +6,7 @@ let person = {
     'name': 'Joni',
     'age': 20,
     'sayHellow': hellow,
+    'sayHellowWindow': hellow.bind(window),
 };
 
 console.log(person);
@@ -13,3 +14,5 @@ console.log(person);
 hellow();
 
 person.sayHellow();
+
+person.sayHellowWindow();
