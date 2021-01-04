@@ -32,6 +32,5 @@ let trianna = {
     'age': 30,
 };
 
-let fnTriannaInfoLog = person.logInfo.bind(trianna,'Frontend', 1000);
-
-fnTriannaInfoLog();
+// person.logInfo.bind(trianna,'Frontend', 1000)();
+person.logInfo.call(trianna,'Frontend', 1000);
