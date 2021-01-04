@@ -7,10 +7,12 @@ let person = {
     'age': 20,
     'sayHellow': hellow,
     'sayHellowWindow': hellow.bind(document),
-    'logInfo': function () {
+    'logInfo': function (job, phone) {
         console.group(`${this.name} info:`);
         console.log(`Name is ${this.name}`);
         console.log(`Age is ${this.age}`);
+        console.log(`Job is ${job}`);
+        console.log(`Phone is ${phone}`);
         console.groupEnd();
     }
 };
@@ -30,4 +32,6 @@ let trianna = {
     'age': 30,
 };
 
-person.logInfo.bind(trianna)();
+let fnTriannaInfoLog = person.logInfo.bind(trianna);
+
+fnTriannaInfoLog('Frontend', 1000);
