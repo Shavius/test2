@@ -8,7 +8,10 @@ let person = {
     'sayHellow': hellow,
     'sayHellowWindow': hellow.bind(document),
     'logInfo': function () {
+        console.group(`${this.name} info:`);
         console.log(`Name is ${this.name}`);
+        console.log(`Age is ${this.age}`);
+        console.group();
     }
 };
 
@@ -20,4 +23,11 @@ let person = {
 
 // person.sayHellowWindow();
 
-person.logInfo();
+// person.logInfo();
+
+let trianna = {
+    'name': 'Trianna',
+    'age': 30,
+};
+
+person.logInfo.bind(trianna)();
