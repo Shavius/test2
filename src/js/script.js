@@ -11,7 +11,7 @@ let person = {
         console.group(`${this.name} info:`);
         console.log(`Name is ${this.name}`);
         console.log(`Age is ${this.age}`);
-        console.group();
+        console.groupEnd();
     }
 };
 
