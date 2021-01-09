@@ -1,8 +1,9 @@
 <?php
     $title = 'Test';
-    require('blocks/header.php');
+    require_once('blocks/path.php');
+    require_once(PATH_BLOCKS. 'header.php');
 ?>
 
 <h1>Test</h1>
 
-<?php require('blocks/footer.php'); ?>
+<?php require_once(PATH_BLOCKS. 'footer.php'); ?>

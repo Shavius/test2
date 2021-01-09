@@ -14,4 +14,4 @@
     <header class="header">
         <a class="header__title" href="/index.php">Shava.ua</a>
     </header>
-    <?php require('blocks/nav.php'); ?>
+    <?php require_once(PATH_BLOCKS. 'nav.php'); ?>
